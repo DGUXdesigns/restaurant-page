@@ -1,0 +1,151 @@
+:root {
+    --primary: #181510;
+    --secondary: #785F37;
+    --accent: #a08c58;
+    --text: #faf4e4;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+    position: relative;
+}
+
+h1,
+h2,
+p {
+    font-family: Helvetica, sans-serif;
+    line-height: 1.1;
+    color: var(--text);
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+p {
+    font-size: 1rem;
+}
+
+/* header Styling */
+header {
+    padding: 1.5rem;
+    background: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 10;
+}
+
+nav {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-end;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--text);
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+nav button:hover {
+    color: var(--accent);
+}
+
+/* Hero Section */
+#hero-section {
+    background-image: url('images/hero-image.jpg');
+    background-size: cover;
+    background-position: bottom 0 right 0;
+    background-repeat: no-repeat;
+    height: 100vh;
+    padding: 1rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title {
+    color: var(--secondary);
+}
+
+.card {
+    max-width: 550px;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem;
+    background-color: rgba(0, 0, 0, .45);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, .25);
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, .25);
+    backdrop-filter: blur(1rem);
+}
+
+.cta {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.reservation,
+.order {
+    padding: 1rem 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: color 0.3s, transform 0.3s, background-color 0.3s;
+}
+
+.reservation {
+    background-color: var(--secondary);
+    color: var(--text);
+}
+
+.order {
+    border: 2px solid var(--secondary);
+    color: var(--secondary);
+}
+
+.reservation:hover {
+    background-color: var(--accent);
+    transform: scale(1.1);
+}
+
+.order:hover {
+    background-color: var(--accent);
+    border-color: var(--accent);
+    color: var(--text);
+    transform: scale(1.1);
+}
+
+
+/* footer styling */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2.5rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}

@@ -12,7 +12,7 @@
 }
 
 body {
-    background-color: black;
+    background-color: var(--primary);
     position: relative;
 }
 
@@ -179,9 +179,11 @@ footer {
     height: 100%;
     padding: 1.5rem;
     background-repeat: no-repeat;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
     position: relative;
     overflow: hidden; 
     transition: transform 0.3s, box-shadow 0.3s;
+    background-color: black;
 }
 
 .menu-container div::before {
@@ -252,4 +254,57 @@ footer {
 .menu-item5 {
     grid-area: item5;
     background-image: url('images/the-veggie-experiment.jpg');
+}
+
+/* about */
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 5rem 2.5rem 2.5rem;
+    height: 100vh;
+}
+
+.welcome,
+.quality,
+.philosophy,
+.join {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem;
+    border: 1px solid var(--text);
+    border-radius: 0.5rem;
+    background-color: black;
+}
+
+.welcome h2,
+.quality h3,
+.philosophy h3,
+.join h3 {
+    color: var(--secondary);
+}
+
+.welcome p,
+.join p {
+    max-width: 100ch;
+    height: 25%;
+    line-height: 1.5;
+}
+
+.core-values {
+    display: flex;
+    gap: 1.5rem;
+    height: 50%;
+}
+
+.core-values p {
+    max-width: 70ch;
+    line-height: 1.5;
+}
+
+.philosophy,
+.quality {
+    width: 50%;
 }

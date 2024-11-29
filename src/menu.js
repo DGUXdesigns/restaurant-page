@@ -1,5 +1,4 @@
 export function displayMenu() {
-    console.log('i am running');
     const content = document.querySelector('#content');
     content.innerHTML = '';
 
